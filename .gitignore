@@ -1,0 +1,94 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+coverage.xml
+*.cover
+.hypothesis/
+.tox/
+
+# Environment
+.env
+.env.*
+!.env.example
+*.local
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+munder_difflin.db
+
+# Logs
+logs/
+*.log
+log/
+
+# Hydra
+outputs/
+multirun/
+.hydra/
+
+# Temporary
+tmp/
+temp/
+*.tmp
+
+# Documentation
+docs/_build/
+site/
+
+# Docker
+docker-compose.override.yml
+
+# Monitoring
+prometheus_data/
+grafana_data/
+
+# Misc
+.mypy_cache/
+.ruff_cache/
+.dmypy.json
+dmypy.json
+*.csv
+!tests/fixtures/*.csv
+
+# Extras
+arc/
