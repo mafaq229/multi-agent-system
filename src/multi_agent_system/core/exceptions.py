@@ -39,65 +39,54 @@ class MultiAgentSystemError(Exception):
 # Database Exceptions
 class DatabaseError(MultiAgentSystemError):
     """Base exception for database-related errors."""
-    pass
 
 
 class RecordNotFoundError(DatabaseError):
     """Raised when a database record is not found."""
-    pass
 
 
 class RecordAlreadyExistsError(DatabaseError):
     """Raised when trying to create a duplicate record."""
-    pass
 
 
 # Agent Exceptions
 class AgentError(MultiAgentSystemError):
     """Base exception for agent-related errors."""
-    pass
 
 
 class AgentTimeoutError(AgentError):
     """Raised when an agent operation times out."""
-    pass
 
 
 class AgentCommunicationError(AgentError):
     """Raised when agents fail to communicate properly."""
-    pass
 
 
 class ToolExecutionError(AgentError):
     """Raised when an agent tool fails to execute."""
-    pass
 
 
 # Business Logic Exceptions
 class BusinessLogicError(MultiAgentSystemError):
     """Base exception for business logic errors."""
-    pass
 
 
 class InsufficientInventoryError(BusinessLogicError):
     """Raised when inventory is insufficient for an order."""
-    pass
 
 
 class InvalidQuoteError(BusinessLogicError):
     """Raised when a quote is invalid or expired."""
-    pass
 
 
 class OrderFulfillmentError(BusinessLogicError):
     """Raised when an order cannot be fulfilled."""
-    pass
 
 
 # API Exceptions
 class APIError(MultiAgentSystemError):
     """Base exception for API-related errors."""
-    
+
     def __init__(
         self,
         message: str,
@@ -118,28 +107,28 @@ class APIError(MultiAgentSystemError):
 
 class ValidationError(APIError):
     """Raised when request validation fails."""
-    
+
     def __init__(self, message: str, details: dict | None = None) -> None:
         super().__init__(message, status_code=422, details=details)
 
 
 class AuthenticationError(APIError):
     """Raised when authentication fails."""
-    
+
     def __init__(self, message: str = "Authentication failed") -> None:
         super().__init__(message, status_code=401)
 
 
 class AuthorizationError(APIError):
     """Raised when authorization fails."""
-    
+
     def __init__(self, message: str = "Access denied") -> None:
         super().__init__(message, status_code=403)
 
 
 class RateLimitError(APIError):
     """Raised when rate limit is exceeded."""
-    
+
     def __init__(self, message: str = "Rate limit exceeded") -> None:
         super().__init__(message, status_code=429)
 
