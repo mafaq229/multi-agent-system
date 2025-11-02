@@ -16,18 +16,23 @@ parts/
 sdist/
 var/
 wheels/
+pip-wheel-metadata/
+share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
 MANIFEST
 
-# Virtual Environment
-venv/
+# Virtual Environments
+.env
+.venv
 env/
+venv/
 ENV/
-.venv/
+env.bak/
+venv.bak/
 
-# IDE
+# IDEs
 .vscode/
 .idea/
 *.swp
@@ -38,57 +43,55 @@ ENV/
 # Testing
 .pytest_cache/
 .coverage
+.coverage.*
 htmlcov/
 coverage.xml
 *.cover
 .hypothesis/
 .tox/
+.nox/
 
-# Environment
-.env
-.env.*
-!.env.example
-*.local
+# Type checking
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+
+# Linting
+.ruff_cache/
+
+# Documentation
+docs/_build/
+site/
 
 # Database
 *.db
 *.sqlite
 *.sqlite3
 munder_difflin.db
+test_munder_difflin.db
 
 # Logs
-logs/
 *.log
-log/
+logs/
+*.log.*
 
-# Hydra
-outputs/
-multirun/
-.hydra/
-
-# Temporary
-tmp/
-temp/
-*.tmp
-
-# Documentation
-docs/_build/
-site/
+# Celery
+celerybeat-schedule
+celerybeat.pid
 
 # Docker
-docker-compose.override.yml
+*.env.local
 
-# Monitoring
-prometheus_data/
-grafana_data/
+# OS
+.DS_Store
+Thumbs.db
 
-# Misc
-.mypy_cache/
-.ruff_cache/
-.dmypy.json
-dmypy.json
-*.csv
-!tests/fixtures/*.csv
+# Project specific
+test_results.csv
+test_output.txt
+evaluation_report*.md
 
-# Extras
-arc/
+# local work
+dev/
