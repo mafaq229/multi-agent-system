@@ -177,7 +177,7 @@ class QuoteResponse(BaseModel):
     @property
     def is_expired(self) -> bool:
         """Check if quote has expired."""
-        return datetime.now() > self.valid_until
+        return datetime.now() > self.valid_until  # noqa: DTZ005
 
     @property
     def total_items(self) -> int:
@@ -215,6 +215,8 @@ class OrderResponse(BaseModel):
 
     Attributes:
         order_id: Unique order identifier
+        customer_id: Customer identifier
+        quote_id: Associated quote identifier (if order from quote)
         status: Current order status
         items_fulfilled: List of items successfully fulfilled
         backorder_items: List of items on backorder
@@ -225,6 +227,8 @@ class OrderResponse(BaseModel):
     """
 
     order_id: str = Field(..., description="Unique order identifier")
+    customer_id: str = Field(..., description="Customer identifier")
+    quote_id: str | None = Field(None, description="Associated quote identifier")
     status: OrderStatus = Field(..., description="Current order status")
     items_fulfilled: list[QuoteItemResponse] = Field(default_factory=list, description="Items successfully fulfilled")
     backorder_items: list[QuoteItemRequest] = Field(default_factory=list, description="Items on backorder")
