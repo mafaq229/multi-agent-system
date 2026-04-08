@@ -211,21 +211,6 @@ make docker-up         # Start all services
 
 See [Development Guide](docs/guides/development-guide.md) for details.
 
-## 🤝 Contributing
-
-Contributions are welcome! Please read our [Contributing Guide](docs/guides/contributing.md) first.
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Make your changes
-4. Run tests (`make test`)
-5. Commit your changes (`git commit -m 'Add amazing feature'`)
-6. Push to the branch (`git push origin feature/amazing-feature`)
-7. Open a Pull Request
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🙏 Acknowledgments
 
@@ -235,11 +220,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📧 Contact
 
-Your Name - your.email@example.com
+Your Name - muhammadafaq1999@gmail.com
 
-Project Link: [https://github.com/yourusername/multi-agent-system](https://github.com/yourusername/multi-agent-system)
-
----
-
-**⭐ If you find this project helpful, please consider giving it a star!**
-
+Project Link: [https://github.com/mafaq229/multi-agent-system](https://github.com/mafaq229/multi-agent-system)
